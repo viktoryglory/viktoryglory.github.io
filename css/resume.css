@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #020617;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-center h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-center h1 span:first-child {
+  color: #eab308; /* Warna kuning untuk "My" */
+}
+
+.nav-center h1 span:last-child {
+  color: #ffffff; 
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-right a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-right a:hover {
+  color: #ffffff;
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #020617;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 101;
+}
+
+.nav-center:hover .language-dropdown {
+  display: flex;
+}
+
+.language-dropdown a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+
+.language-dropdown a:hover {
+  color: #ffffff;
+  background-color: #1e293b;
+}
+
+/* Media query untuk responsivitas navbar */
+@media (max-width: 768px) {
+  .nav-right {
+    display: none;
+  }
+
+  .language-dropdown {
+    display: none;
+  }
+
+  .nav-center:hover .language-dropdown {
+    display: flex;
+  }
+
+  /* Responsivitas tambahan untuk elemen lain */
+  .education-header,
+  .work-header {
+    flex-direction: column;
+  }
+
+  .location-date {
+    text-align: left;
+    margin-top: 0.25rem;
+  }
+
+  .certificate-list {
+    column-count: 1;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .language-dropdown {
+    display: none !important;
+  }
+}
+
+/* Container utama */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Header profile */
+.profile-header {
+  margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  color: #64748b;
+}
+
+.location {
+  color: #64748b;
+}
+
+/* Summary section */
+.summary {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  font-weight: 600;
+}
+
+/* Education section */
+.education-item {
+  margin-bottom: 1.5rem;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.location-date {
+  color: #64748b;
+  text-align: right;
+}
+
+.degree {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.education-details {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.education-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Work experience section */
+.work-item {
+  margin-bottom: 1.5rem;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.position {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.work-details {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.work-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Other experiences section */
+.project-item {
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.project-details {
+  padding-left: 1.5rem;
+}
+
+.project-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skill-category {
+  flex: 1;
+  min-width: 250px;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  background-color: #e2e8f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Certificates section */
+.certificate-list {
+  padding-left: 1.5rem;
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.certificate-list li {
+  margin-bottom: 0.5rem;
+  break-inside: avoid;
+}
+
+/* List styling */
+ul {
+  list-style-type: disc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education-header,
+  .work-header {
+    flex-direction: column;
+  }
+
+  .location-date {
+    text-align: left;
+    margin-top: 0.25rem;
+  }
+
+  .certificate-list {
+    column-count: 1;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

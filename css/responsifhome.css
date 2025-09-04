@@ -1,0 +1,1761 @@
+/* Responsive Navbar - Hamburger Menu */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #020617;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  nav ul.active {
+    left: 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  /* Hamburger Icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+/* Untuk layar yang lebih besar, sembunyikan hamburger */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Responsive Styles for Hero Section - Text Above, Image Below */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px 60px;
+    min-height: auto;
+    height: auto;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    order: 1; /* Text di atas */
+  }
+  
+  .hero-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    line-height: 1.3;
+  }
+  
+  .hero-text p {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  #hero img {
+    max-width: 280px;
+    order: 2; /* Gambar di bawah */
+    margin: 0 auto;
+  }
+  
+  .hero-text button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero {
+    padding: 110px 15px 50px;
+    gap: 25px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-text h3 {
+    font-size: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  #hero img {
+    max-width: 180px;
+  }
+  
+  .hero-text button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #hero {
+    padding: 100px 12px 40px;
+    gap: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+  
+  .hero-text h3 {
+    font-size: 0.95rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+  
+  #hero img {
+    max-width: 190px;
+  }
+  
+  .hero-text button {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Untuk perangkat dengan tinggi terbatas (mobile landscape) */
+@media (max-height: 600px) and (orientation: landscape) {
+  #hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 100px 30px 50px;
+    gap: 40px;
+  }
+  
+  .hero-text {
+    max-width: 60%;
+    order: 1;
+  }
+  
+  #hero img {
+    max-width: 200px;
+    order: 2;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Untuk tablet kecil (portrait) */
+@media (min-width: 577px) and (max-width: 768px) {
+  #hero {
+    padding: 120px 40px 70px;
+    gap: 40px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  #hero img {
+    max-width: 230px;
+  }
+}
+
+/* Memastikan layout tetap konsisten di desktop */
+@media (min-width: 769px) {
+  #hero {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .hero-text {
+    order: 1;
+  }
+  
+  #hero img {
+    order: 2;
+    max-width: 280px;
+  }
+}
+
+/* Responsive Styles for About Section - Image Above, Text Below */
+@media (max-width: 1200px) {
+  #about {
+    padding: 150px 80px 80px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-img img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  #about {
+    padding: 140px 60px 60px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.7rem;
+  }
+  
+  .about-img img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 60px;
+    min-height: auto;
+    height: auto;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  
+  .about-text {
+    max-width: 100%;
+    order: 2; /* Text di bawah */
+  }
+  
+  .about-img {
+    order: 1; /* Gambar di atas */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-text p {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .about-img img {
+    max-width: 200px;
+    position: relative;
+    z-index: 2;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-img .border-box {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #EAB308;
+    border-radius: 10px;
+    z-index: 1;
+    max-width: 200px;
+  }
+  
+  .about-text button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #about {
+    padding: 90px 15px 50px;
+    gap: 30px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .about-text p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-img img {
+    max-width: 180px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-img .border-box {
+    max-width: 180px;
+    border-width: 8px;
+    top: 1rem;
+    left: 0;
+  }
+  
+  .about-text button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #about {
+    padding: 80px 12px 40px;
+    gap: 25px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.4rem;
+  }
+  
+  .about-text p {
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+  
+  .about-img img {
+    max-width: 150px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-img .border-box {
+    max-width: 150px;
+    border-width: 8px;
+    top: 1rem;
+    left: 0;
+  }
+  
+  .about-text button {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Untuk perangkat dengan tinggi terbatas (mobile landscape) */
+@media (max-height: 600px) and (orientation: landscape) {
+  #about {
+    flex-direction: row;
+    text-align: left;
+    padding: 100px 30px 50px;
+    gap: 40px;
+  }
+  
+  .about-text {
+    max-width: 60%;
+    order: 2;
+  }
+  
+  .about-img {
+    order: 1;
+    margin: 0;
+  }
+  
+  .about-img img {
+    max-width: 160px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-img .border-box {
+    max-width: 160px;
+    top: 1rem;
+    left: 0;
+  }
+  
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Untuk tablet kecil (portrait) */
+@media (min-width: 577px) and (max-width: 768px) {
+  #about {
+    padding: 100px 40px 70px;
+    gap: 40px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.9rem;
+  }
+  
+  .about-img img {
+    max-width: 200px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-img .border-box {
+    max-width: 200px;
+    top: 1rem;
+    left: 0;
+  }
+}
+
+/* Memastikan layout tetap konsisten di desktop */
+@media (min-width: 769px) {
+  #about {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .about-text {
+    order: 2;
+  }
+  
+  .about-img {
+    order: 1;
+    margin: 0;
+  }
+  
+  .about-img img {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 300px;
+  }
+  
+  .about-img .border-box {
+    max-width: 300px;
+    top: 1rem;
+    left: 0;
+  }
+}
+
+/* Penyesuaian khusus untuk border box */
+.about-img {
+  position: relative;
+  display: inline-block;
+}
+
+.about-img .border-box {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #EAB308;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.about-img img {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  z-index: 2;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles for Portfolio Section with 3rem side padding */
+@media (max-width: 1200px) {
+  #portfolio {
+    padding: 120px 3rem 3rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 2.2rem;
+  }
+  
+  .card {
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 330px;
+    max-height: 330px;
+  }
+  
+  .card-img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 992px) {
+  #portfolio {
+    padding: 110px 3rem 2.5rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 2rem;
+  }
+  
+  #portfolio p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    min-width: 260px;
+    max-width: 260px;
+    min-height: 310px;
+    max-height: 310px;
+  }
+  
+  .card-img {
+    height: 180px;
+  }
+  
+  .card-title {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+  
+  .card-text {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  #portfolio {
+    padding: 100px 3rem 2rem;
+    min-height: auto;
+    height: auto;
+  }
+  
+  #portfolio .text-center {
+    margin-top: -2rem;
+    padding: 0 1rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+  
+  #portfolio p {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    padding: 0 1rem;
+  }
+  
+  #portfolioContainer {
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .card {
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 290px;
+    max-height: 290px;
+  }
+  
+  .card-img {
+    height: 160px;
+  }
+  
+  .card-title {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+  
+  .card-text {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+  
+  .overlay-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .scroll-btn.left {
+    left: -1rem;
+  }
+  
+  .scroll-btn.right {
+    right: -1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #portfolio {
+    padding: 90px 1.5rem 1.5rem;
+  }
+  
+  #portfolio .text-center {
+    padding: 0 0.5rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+  }
+  
+  #portfolio p {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+  
+  #portfolioContainer {
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .card {
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 270px;
+    max-height: 270px;
+  }
+  
+  .card-img {
+    height: 150px;
+  }
+  
+  .card-title {
+    font-size: 0.85rem;
+    padding: 5px;
+  }
+  
+  .card-text {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+  
+  .overlay-btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+  .scroll-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+  
+  .scroll-btn.left {
+    left: -0.5rem;
+  }
+  
+  .scroll-btn.right {
+    right: -0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #portfolio {
+    padding: 80px 1rem 1rem;
+  }
+  
+  #portfolio .text-center {
+    padding: 0 0.25rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 1.4rem;
+    padding: 0 0.25rem;
+  }
+  
+  #portfolio p {
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
+  }
+  
+  #portfolioContainer {
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 250px;
+    max-height: 250px;
+  }
+  
+  .card-img {
+    height: 140px;
+  }
+  
+  .card-title {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+  
+  .card-text {
+    font-size: 0.7rem;
+    padding: 4px;
+  }
+  
+  .overlay-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  .scroll-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+  
+  .scroll-btn.left {
+    left: -0.25rem;
+  }
+  
+  .scroll-btn.right {
+    right: -0.25rem;
+  }
+}
+
+/* Untuk perangkat dengan lebar sangat kecil */
+@media (max-width: 350px) {
+  #portfolio {
+    padding: 80px 0.75rem 1rem;
+  }
+  
+  #portfolio .text-center {
+    padding: 0 0.15rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 1.3rem;
+    padding: 0 0.15rem;
+  }
+  
+  #portfolio p {
+    font-size: 0.7rem;
+    padding: 0 0.15rem;
+  }
+  
+  #portfolioContainer {
+    gap: 0.4rem;
+    padding: 0 0.15rem;
+  }
+  
+  .card {
+    min-width: 180px;
+    max-width: 180px;
+    min-height: 230px;
+    max-height: 230px;
+  }
+  
+  .card-img {
+    height: 130px;
+  }
+}
+
+/* Penyesuaian untuk tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  #portfolio {
+    padding: 110px 3rem 3rem;
+  }
+  
+  #portfolio h2 {
+    padding: 0 1rem;
+  }
+  
+  #portfolio p {
+    padding: 0 1rem;
+  }
+  
+  #portfolioContainer {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  
+  .card-img {
+    height: 170px;
+  }
+}
+
+/* Memastikan semua elemen text tidak melebihi batas padding */
+#portfolio .relative {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#portfolio .text-center,
+#portfolio h2,
+#portfolio p {
+  box-sizing: border-box;
+}
+
+/* Memastikan scroll horizontal tetap bekerja dengan baik */
+#portfolioContainer {
+  scrollbar-width: thin;
+  scrollbar-color: #EAB308 #020617;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#portfolioContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+#portfolioContainer::-webkit-scrollbar-track {
+  background: #020617;
+  border-radius: 3px;
+}
+
+#portfolioContainer::-webkit-scrollbar-thumb {
+  background: #EAB308;
+  border-radius: 3px;
+}
+
+#portfolioContainer::-webkit-scrollbar-thumb:hover {
+  background: #ffcc00;
+}
+
+/* Memastikan card overlay tetap responsif */
+.card-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-btn {
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Menambahkan efek hover yang lebih baik untuk mobile */
+@media (hover: none) {
+  .group:hover .card-overlay {
+    opacity: 1;
+  }
+}
+
+/* Memastikan teks tidak overflow pada card */
+.card-title,
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+/* Memastikan scroll button tidak keluar dari container */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.scroll-btn.left {
+  left: 1rem;
+}
+
+.scroll-btn.right {
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn.left {
+    left: 0.5rem;
+  }
+  
+  .scroll-btn.right {
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-btn {
+    display: none; /* Sembunyikan scroll button di mobile kecil */
+  }
+}
+
+
+/* Responsive Styles for Experiences Section with 3rem side padding */
+@media (max-width: 1200px) {
+  #experiences {
+    padding: 120px 3rem 2rem;
+  }
+  
+  #experiences .section-header {
+    padding-inline-start: 0;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  #experiences h2 {
+    font-size: 2.2rem;
+  }
+  
+  .exp-card {
+    width: 280px;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 992px) {
+  #experiences {
+    padding: 110px 3rem 2rem;
+  }
+  
+  #experiences h2 {
+    font-size: 2rem;
+  }
+  
+  #experiences p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  
+  .exp-card {
+    width: 260px;
+    min-height: 250px;
+    padding: 1.1rem;
+  }
+  
+  .exp-title {
+    font-size: 1.1rem;
+  }
+  
+  .exp-company {
+    font-size: 0.95rem;
+  }
+  
+  .exp-date, .exp-type, .exp-desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #experiences {
+    padding: 100px 3rem 2rem;
+    min-height: auto;
+    height: auto;
+    align-items: center;
+  }
+  
+  #experiences .section-header {
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #experiences h2 {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+  
+  #experiences p {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    padding: 0 1rem;
+  }
+  
+  #experienceContainer {
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .exp-card {
+    width: 240px;
+    min-height: 230px;
+    padding: 1rem;
+  }
+  
+  .exp-title {
+    font-size: 1rem;
+  }
+  
+  .exp-company {
+    font-size: 0.9rem;
+  }
+  
+  .exp-date, .exp-type, .exp-desc {
+    font-size: 0.8rem;
+  }
+  
+  .see-more-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .scroll-btn.left {
+    left: 0.5rem;
+  }
+  
+  .scroll-btn.right {
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #experiences {
+    padding: 90px 1.5rem 1.5rem;
+  }
+  
+  #experiences .section-header {
+    padding: 0 0.5rem;
+  }
+  
+  #experiences h2 {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+  }
+  
+  #experiences p {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+  
+  #experienceContainer {
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .exp-card {
+    width: 220px;
+    min-height: 210px;
+    padding: 0.9rem;
+  }
+  
+  .exp-title {
+    font-size: 0.95rem;
+  }
+  
+  .exp-company {
+    font-size: 0.85rem;
+  }
+  
+  .exp-date, .exp-type, .exp-desc {
+    font-size: 0.75rem;
+  }
+  
+  .exp-desc {
+    -webkit-line-clamp: 2;
+  }
+  
+  .see-more-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .scroll-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+  
+  .scroll-btn.left {
+    left: 0.25rem;
+  }
+  
+  .scroll-btn.right {
+    right: 0.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #experiences {
+    padding: 80px 1rem 1rem;
+  }
+  
+  #experiences .section-header {
+    padding: 0 0.25rem;
+  }
+  
+  #experiences h2 {
+    font-size: 1.4rem;
+    padding: 0 0.25rem;
+  }
+  
+  #experiences p {
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
+  }
+  
+  #experienceContainer {
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .exp-card {
+    width: 200px;
+    min-height: 190px;
+    padding: 0.8rem;
+  }
+  
+  .exp-title {
+    font-size: 0.9rem;
+  }
+  
+  .exp-company {
+    font-size: 0.8rem;
+  }
+  
+  .exp-date, .exp-type, .exp-desc {
+    font-size: 0.7rem;
+  }
+  
+  .exp-desc {
+    -webkit-line-clamp: 2;
+    margin-top: 8px;
+  }
+  
+  .see-more-btn {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+  
+  .scroll-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+  
+  .scroll-btn.left {
+    left: 0.1rem;
+  }
+  
+  .scroll-btn.right {
+    right: 0.1rem;
+  }
+}
+
+/* Untuk perangkat dengan lebar sangat kecil */
+@media (max-width: 350px) {
+  #experiences {
+    padding: 80px 0.75rem 1rem;
+  }
+  
+  #experiences .section-header {
+    padding: 0 0.15rem;
+  }
+  
+  #experiences h2 {
+    font-size: 1.3rem;
+    padding: 0 0.15rem;
+  }
+  
+  #experiences p {
+    font-size: 0.7rem;
+    padding: 0 0.15rem;
+  }
+  
+  #experienceContainer {
+    gap: 0.4rem;
+    padding: 0 0.15rem;
+  }
+  
+  .exp-card {
+    width: 180px;
+    min-height: 170px;
+    padding: 0.7rem;
+  }
+  
+  .exp-title {
+    font-size: 0.85rem;
+  }
+  
+  .exp-company {
+    font-size: 0.75rem;
+  }
+  
+  .exp-date, .exp-type {
+    font-size: 0.65rem;
+  }
+  
+  .exp-desc {
+    font-size: 0.65rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Penyesuaian untuk tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  #experiences {
+    padding: 110px 3rem 2rem;
+  }
+  
+  #experiences .section-header {
+    padding: 0 1rem;
+  }
+  
+  #experiences h2 {
+    padding: 0 1rem;
+  }
+  
+  #experiences p {
+    padding: 0 1rem;
+  }
+  
+  #experienceContainer {
+    padding: 0 1rem;
+  }
+  
+  .exp-card {
+    width: 250px;
+    min-height: 240px;
+  }
+}
+
+#experiences .relative {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
+
+#experiences .section-header,
+#experiences h2,
+#experiences p {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#experienceContainer {
+  scrollbar-width: thin;
+  scrollbar-color: #EAB308 #020617;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#experienceContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+#experienceContainer::-webkit-scrollbar-track {
+  background: #020617;
+  border-radius: 3px;
+}
+
+#experienceContainer::-webkit-scrollbar-thumb {
+  background: #EAB308;
+  border-radius: 3px;
+}
+
+#experienceContainer::-webkit-scrollbar-thumb:hover {
+  background: #ffcc00;
+}
+
+/* Memastikan scroll button tidak keluar dari container */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+@media (max-width: 576px) {
+  .scroll-btn {
+    display: none; /* Sembunyikan scroll button di mobile kecil */
+  }
+}
+
+/* Memastikan teks tidak overflow pada card */
+.exp-title,
+.exp-company,
+.exp-date,
+.exp-type,
+.exp-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+/* Menambahkan efek hover yang lebih baik untuk mobile */
+@media (hover: none) {
+  .exp-card:hover .see-more-btn {
+    opacity: 1;
+  }
+}
+
+/* Memastikan layout experiences tetap center di mobile */
+@media (max-width: 768px) {
+  #experiences {
+    align-items: center;
+  }
+  
+  #experiences .relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #experiences .section-header {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.exp-card {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Styles for Contact Section */
+@media (max-width: 1200px) {
+  #contact {
+    padding: 70px 3rem 0;
+  }
+  
+  #contact .contact-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  #contact .contact-card {
+    width: 260px;
+    padding: 1.8rem;
+  }
+  
+  #contact .contact-card .icon {
+    font-size: 2.8rem;
+  }
+  
+  #contact .contact-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  #contact .contact-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #contact {
+    padding: 70px 3rem 0;
+  }
+  
+  #contact .contact-header {
+    padding: 1.5rem 1.5rem;
+  }
+  
+  #contact .contact-header h2 {
+    font-size: 1.7rem;
+  }
+  
+  #contact .contact-header p {
+    font-size: 0.85rem;
+  }
+  
+  #contact .contact-container {
+    gap: 1.5rem;
+  }
+  
+  #contact .contact-card {
+    width: 240px;
+    padding: 1.6rem;
+  }
+  
+  #contact .contact-card .icon {
+    font-size: 2.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #contact .contact-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #contact .contact-card p {
+    font-size: 0.9rem;
+  }
+  
+  #contact .socials h3 {
+    font-size: 1.1rem;
+  }
+  
+  #contact .socials .icons a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 70px 2rem 0;
+    min-height: auto;
+    height: auto;
+  }
+  
+  #contact .contact-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  #contact .contact-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  #contact .contact-header p {
+    font-size: 0.8rem;
+  }
+  
+  #contact .contact-body {
+    padding: 1.5rem 0;
+  }
+  
+  #contact .contact-container {
+    gap: 1.2rem;
+    padding: 0 1rem;
+  }
+  
+  #contact .contact-card {
+    width: 220px;
+    padding: 1.4rem;
+  }
+  
+  #contact .contact-card .icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  #contact .contact-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  #contact .contact-card p {
+    font-size: 0.85rem;
+  }
+  
+  #contact .socials {
+    padding: 1rem 0;
+  }
+  
+  #contact .socials h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #contact .socials .icons {
+    gap: 0.8rem;
+  }
+  
+  #contact .socials .icons a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact {
+    padding: 70px 1.5rem 0;
+  }
+  
+  #contact .contact-header {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  #contact .contact-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  #contact .contact-header p {
+    font-size: 0.75rem;
+  }
+  
+  #contact .contact-body {
+    padding: 1.2rem 0;
+  }
+  
+  #contact .contact-container {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #contact .contact-card {
+    width: 280px;
+    max-width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #contact .contact-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #contact .contact-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #contact .contact-card p {
+    font-size: 0.9rem;
+  }
+  
+  #contact .socials {
+    padding: 0.8rem 0;
+  }
+  
+  #contact .socials h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  #contact .socials .icons {
+    gap: 0.7rem;
+  }
+  
+  #contact .socials .icons a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #contact {
+    padding: 70px 1rem 0;
+  }
+  
+  #contact .contact-header {
+    padding: 1rem 0.5rem;
+  }
+  
+  #contact .contact-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  #contact .contact-header p {
+    font-size: 0.7rem;
+  }
+  
+  #contact .contact-body {
+    padding: 1rem 0;
+  }
+  
+  #contact .contact-container {
+    gap: 0.8rem;
+  }
+  
+  #contact .contact-card {
+    width: 260px;
+    padding: 1.2rem;
+  }
+  
+  #contact .contact-card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #contact .contact-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #contact .contact-card p {
+    font-size: 0.8rem;
+  }
+  
+  #contact .socials {
+    padding: 0.6rem 0;
+  }
+  
+  #contact .socials h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #contact .socials .icons {
+    gap: 0.6rem;
+  }
+  
+  #contact .socials .icons a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Untuk perangkat dengan lebar sangat kecil */
+@media (max-width: 350px) {
+  #contact {
+    padding: 70px 0.75rem 0;
+  }
+  
+  #contact .contact-header {
+    padding: 0.8rem 0.4rem;
+  }
+  
+  #contact .contact-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  #contact .contact-header p {
+    font-size: 0.65rem;
+  }
+  
+  #contact .contact-card {
+    width: 240px;
+    padding: 1rem;
+  }
+  
+  #contact .contact-card .icon {
+    font-size: 2rem;
+  }
+  
+  #contact .contact-card h3 {
+    font-size: 0.85rem;
+  }
+  
+  #contact .contact-card p {
+    font-size: 0.75rem;
+  }
+  
+  #contact .socials .icons a {
+    font-size: 1rem;
+  }
+}
+
+/* Penyesuaian untuk tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  #contact {
+    padding: 70px 3rem 0;
+  }
+  
+  #contact .contact-container {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  #contact .contact-card {
+    width: 220px;
+    padding: 1.5rem;
+  }
+}
+
+#contact {
+  box-sizing: border-box;
+}
+
+#contact .contact-header,
+#contact .contact-body,
+#contact .contact-container,
+#contact .socials {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#contact .contact-header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contact .contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#contact .contact-card {
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+#contact .contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(234, 179, 8, 0.2);
+}
+
+/* Optimasi untuk mobile */
+@media (max-width: 576px) {
+  #contact .contact-container {
+    flex-direction: column;
+  }
+  
+  #contact .contact-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+#contact .socials .icons a {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .socials .icons a:hover {
+  transform: scale(1.1);
+}
+
+#contact .contact-body {
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #contact .contact-body {
+    gap: 1rem;
+  }
+}
